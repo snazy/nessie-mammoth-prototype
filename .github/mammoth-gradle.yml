@@ -1,0 +1,9 @@
+# Shared Mammoth settings for every cache job in ci.yml (replay experiment).
+# Non-default GC values shorten the sweep cycle so that a ~10-day replay sees several sweeps.
+cache-partitions:
+  - id: dependency-metadata
+    writer: code-checks
+worker-artifact-retention-days: 1
+cache-gc-mode: timestamp
+cache-gc-older-than-days: 2
+dependency-gc-interval-days: 1
